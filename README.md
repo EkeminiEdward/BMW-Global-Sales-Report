@@ -39,13 +39,13 @@
 **Context:** BMW, which is a large-size global premium automotive company, was experiencing inconsistent revenue across its regional markets but couldn't identify the root cause. Also, they want to know how EV adoption trend is at every region, what drives customer satisfaction, how the financing type correlates with vehicle model segments, etc. This project explored 24 months of transactional data across seven regions, with 10,000 premium vehicle transactions, covering 25 countries to determine BMWW's product portfolio, regional sales performance, electric vehicle adoption, pricing strategies, finanacing patterns, warranty packages adoption, customer satifaction, delivery performance, and customer retention.
 
 **Problem Statement:** The dashboard is designed to answer the following stategic questions
-                      - How is BMW's electric vehicle lineup gaining ground year over year?
-                      - Do customers in the Middle East pay more than those in Europe?
-                      - Which models get the deepest discounts, and why?
-                      - Cash, lease, or loan? How does financing choice correlate with model segment?
-                      - Customer satisfaction drivers — What predicts a 5-star score vs a 3-star score?
-                      - Repeat customer analysis — Which segments retain buyers and which ones don't?
-                      - Delivery time bottlenecks — Does a longer wait hurt satisfaction?
+                       How is BMW's electric vehicle lineup gaining ground year over year?
+                       Do customers in the Middle East pay more than those in Europe?
+                       Which models get the deepest discounts, and why?
+                       Cash, lease, or loan? How does financing choice correlate with model segment?
+                       Customer satisfaction drivers — What predicts a 5-star score vs a 3-star score?
+                       Repeat customer analysis — Which segments retain buyers and which ones don't?
+                       Delivery time bottlenecks — Does a longer wait hurt satisfaction?
 
 **Approach:** The approach was concise and direct. Started with haveing a proper understanding of the business problem statement, then proceeded to understand the dataset, then performed a rubost and detailed data preparation, modelled the data with a star schema, performed analysis, did evaluations on the analysis, developed an interactive dashboard, provided a high level business recommendations, and finally did a proper documentation.
 
