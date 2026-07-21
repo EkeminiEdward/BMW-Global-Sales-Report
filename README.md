@@ -174,7 +174,7 @@
 1. **Source:** The dataset contains a CSV file, which is a simulated BMW automotive global sales transactions across seven regions and more than 25 countries, with 10,000 transactional records, covering January 2024 - December 2025.
 2. **Ingestion:** Loaded into Power Query. File contained approx. 10,000 rows and 30 columns.
 3. **Cleaning:** The dataset was evaluated for missing values across all columns. Expected null values were retained where they accurately represented business scenarios. For example, the loan_term_months column had blank rows for cash purchases because no financing agreements exits. Also, customer_satisfaction_score column is blank for customers who did not complete the post-purchase survey. These null values were preserved to avoid introducing analytical bias. Unexpected null values were investigated and resolved before modelling. Duplicates were checked and removed to ensure that revenue, sales volume, and customer metrics are not overstated. Standardized data formats across the entire dataset. 
-4. **Transformation:** [What new fields, aggregations, or structures did you create?]
+4. **Transformation:** Created a dedicated Date table for trend and time intelligence analysis. Created dimension tables for data modelling. Aggregated data to monthly, quaterly, and anually regional gains for trend analysis. Optimized columns for reporting performance.                   
 5. **Analysis:** [What methods - statistical, visual, query-based, model-based?]
 6. **Output:** [What form do the results take?]
 
