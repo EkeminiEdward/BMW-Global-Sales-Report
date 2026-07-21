@@ -56,7 +56,7 @@
 ## 2. Objectives
 
 
-- [ ] The primary objective of this project is to design an executiveBusiness Intelligence dashboard capable of supporting strategic decision-making through comprehensive sales and customer analytics. Specifically, the dashboard aims to:
+The primary objective of this project is to design an Executive Business Intelligence Dashboard capable of supporting strategic decision-making through comprehensive sales and customer analytics. Specifically, the dashboard aims to:
 - [ ] Monitor overall business performance using executive KPI indicators.
 - [ ] Evaluate revenue performance across reegions, countries, vehicle models, and product segments.
 - [ ] Analyze year-over-year sales growth and monthly sales trends.
