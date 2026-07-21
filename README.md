@@ -82,15 +82,10 @@ Specifically, the dashboard aims to:
 | **In Scope** | This project includes 10,000 simulated BMW vehicle transactions recorded between January 2024 and December 2025 across more than 25 countries and seven global regions. Analysis covers sales performance, revenue, product performance evaluation, regional performance, customer behaviour, premium warranty adoption, financing, delivery performance, electric vehicle adoption, interactive dashboard development, and strategic business recommendations. |
 | **Out of Scope** | The project does not include manufacturing operations, supply chain management, inventory optimization, dealer profitability analysis, marketing campaign effectiveness, vehicle production planning, financial accounting, Cost of Goods Sold(COGS), net profit analysis, and competitor benchmarking. |
 | **Time Period** | January 2024 - December 2025 |
-| **Granularity** | [Unit of analysis - row-level, daily aggregates, per-user, etc.] |
 
 ### Tools & Technologies
 
-<!--
-  List only what you actually used on this project.
-  This is not your skills section - it's the project's technical context.
--->
-
+  
 | Category | Tool(s) Used |
 |----------|-------------|
 | Data Storage | CSV files |
@@ -123,8 +118,6 @@ Specifically, the dashboard aims to:
 └── README.md                 # You are here
 ```
 
-> ⚠️ *Delete folders you didn't use. An empty folder is worse than no folder.*
-> SQL-heavy projects: keep `queries/`. Analysis-only projects: keep `notebooks/`. Both? Keep both.
 
 ---
 
