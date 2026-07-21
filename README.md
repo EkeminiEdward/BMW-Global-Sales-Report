@@ -56,17 +56,18 @@
 ## 2. Objectives
 
 
-The primary objective of this project is to design an Executive Business Intelligence Dashboard capable of supporting strategic decision-making through comprehensive sales and customer analytics. Specifically, the dashboard aims to:
-- [ ] Monitor overall business performance using executive KPI indicators.
-- [ ] Evaluate revenue performance across reegions, countries, vehicle models, and product segments.
-- [ ] Analyze year-over-year sales growth and monthly sales trends.
-- [ ] Measure the adoption of BMW's electric vehicle portfolio.
-- [ ] Evaluate pricing strategies through discount and revenue analysis.
-- [ ] Assess customer satisfaction and identify its primary drivers.
-- [ ] Measure customer loyalty using repeat purchase analysis.
-- [ ] Analyze financing preferences across customer and product segments.
-- [ ] Monitor delivery lead times and evaluate operational efficiency.
-- [ ] Enable executives to explore business performance interactively through dynamic filtering and drill-down analysis.
+The primary objective of this project is to design an Executive Business Intelligence Dashboard capable of supporting strategic decision-making through comprehensive sales and customer analytics. 
+Specifically, the dashboard aims to:
+-  Monitor overall business performance using executive KPI indicators.
+-  Evaluate revenue performance across reegions, countries, vehicle models, and product segments.
+-  Analyze year-over-year sales growth and monthly sales trends.
+-  Measure the adoption of BMW's electric vehicle portfolio.
+-  Evaluate pricing strategies through discount and revenue analysis.
+-  Assess customer satisfaction and identify its primary drivers.
+-  Measure customer loyalty using repeat purchase analysis.
+-  Analyze financing preferences across customer and product segments.
+-  Monitor delivery lead times and evaluate operational efficiency.
+-  Enable executives to explore business performance interactively through dynamic filtering and drill-down analysis.
 
 
 ---
