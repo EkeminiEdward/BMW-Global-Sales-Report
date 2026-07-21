@@ -111,14 +111,7 @@
 │   ├── processed/            # Cleaned and transformed data
 │   └── external/             # Reference data, lookup tables, third-party files
 │
-├── notebooks/                # Jupyter, R Markdown, or Colab notebooks
-│
 ├── scripts/                  # Reusable .py, .R, or .sh processing files
-│
-├── queries/                  # SQL files (retain this folder for SQL-heavy projects)
-│   ├── exploratory/          # Ad-hoc or investigative queries
-│   ├── transformations/      # Cleaning and reshaping logic
-│   └── final/                # Production-ready or presentation queries
 │
 ├── reports/                  # Final outputs: PDFs, slide decks, Word docs
 │
@@ -126,7 +119,6 @@
 │
 ├── docs/                     # Data dictionaries, schema notes, reference material
 │
-├── project_metadata.yml      # Machine-readable metadata (optional)
 └── README.md                 # You are here
 ```
 
@@ -136,28 +128,6 @@
 ---
 
 ## 5. Data Workflow
-
-<!--
-  Show how data moved through your project - from source to output.
-  Every transformation decision should be traceable here.
-
-  WHAT GOOD LOOKS LIKE:
-  1. Source: "Monthly CSV exports pulled from the internal POS system.
-              Five files, one per region, covering Jan 2023–Jun 2024."
-  2. Ingestion: "Loaded into Python using pandas. Files concatenated into
-                 a single dataframe (approx. 340,000 rows)."
-  3. Cleaning: "Removed 1.2% of rows with null transaction IDs.
-                Standardised date formats across regional files.
-                Resolved product category naming inconsistencies (3 variants → 1)."
-  4. Transformation: "Created a returns_rate field at product-category level.
-                      Aggregated to weekly and regional grain for trend analysis."
-  5. Analysis: "Descriptive statistics, regional comparison, return rate
-                segmentation by product category."
-  6. Output: "Summary report (PDF), annotated notebook, processed CSV."
-
-  WHAT TO AVOID:
-  ❌ "Data was cleaned and analysed." (No chain. No decisions. No trust.)
--->
 
 ```
 [Data Source(s)]
@@ -175,8 +145,8 @@
 2. **Ingestion:** Loaded into Power Query. File contained approx. 10,000 rows and 30 columns.
 3. **Cleaning:** The dataset was evaluated for missing values across all columns. Expected null values were retained where they accurately represented business scenarios. For example, the loan_term_months column had blank rows for cash purchases because no financing agreements exits. Also, customer_satisfaction_score column is blank for customers who did not complete the post-purchase survey. These null values were preserved to avoid introducing analytical bias. Unexpected null values were investigated and resolved before modelling. Duplicates were checked and removed to ensure that revenue, sales volume, and customer metrics are not overstated. Standardized data formats across the entire dataset. 
 4. **Transformation:** Created a dedicated Date table for trend and time intelligence analysis. Created dimension tables for data modelling. Aggregated data to monthly, quaterly, and anually regional gains for trend analysis. Optimized columns for reporting performance.                   
-5. **Analysis:** [What methods - statistical, visual, query-based, model-based?]
-6. **Output:** [What form do the results take?]
+5. **Analysis:** Descriptive statistics, regional comparisons, EV adoption rate, customer satisfaction index (CSI), customer retention rate, top revenue region, top selling model, premium warranty adoption rate, top CSI region, avg delivery lead time, largest EV market, etc.
+6. **Output:** Summary report (PDF)
 
 ---
 
