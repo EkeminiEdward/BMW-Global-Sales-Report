@@ -1,10 +1,8 @@
 # BMW Global Sales Report
-> *One sentence. What did you analyze, build, or solve - and why does it matter?*
 
 ---
 
 ## ⚙️ Project Type Flags
-> *Check what applies. This helps reviewers and collaborators understand the nature of the work at a glance. Delete this block before publishing.*
 
 -  Exploratory Data Analysis (EDA)
 - [ ] SQL Analysis / Querying
@@ -37,24 +35,6 @@
 
 ## 1. Project Overview
 
-<!--
-  Write 3–5 sentences in plain language.
-  Cover: context → problem → approach → outcome.
-  Read it out loud. If it sounds like a form - rewrite it.
-
-  WHAT GOOD LOOKS LIKE:
-  "A mid-size retail business was seeing inconsistent revenue across
-  its regional stores but couldn't identify the root cause. This project
-  explored 18 months of transaction data across five regions to determine
-  whether underperformance was driven by sales volume, pricing, or return
-  rates. The analysis revealed that one region's gap was almost entirely
-  explained by an unusually high return rate on a single product category -
-  a finding invisible in the company's top-level reporting."
-
-  WHAT TO AVOID:
-  "This project analyzes sales data to find trends and insights."
-  (Too vague. Could describe 10,000 projects. Describes none of them.)
--->
 
 **Context:** BMW, which is a large-size global premium automotive company, was experiencing inconsistent revenue across its regional markets but couldn't identify the root cause. Also, they want to know how EV adoption trend is at every region, what drives customer satisfaction, how the financing type correlates with vehicle model segments, etc. This project explored 24 months of transactional data across seven regions, with 10,000 premium vehicle transactions, covering 25 countries to determine BMWW's product portfolio, regional sales performance, electric vehicle adoption, pricing strategies, finanacing patterns, warranty packages adoption, customer satifaction, delivery performance, and customer retention.
 
@@ -67,9 +47,9 @@
                       - Repeat customer analysis — Which segments retain buyers and which ones don't?
                       - Delivery time bottlenecks — Does a longer wait hurt satisfaction?
 
-**Approach:** [In 1–2 sentences - how did you tackle it?]
+**Approach:** The approach was concise and direct. Started with haveing a proper understanding of the business problem statement, then proceeded to understand the dataset, then performed a rubost and detailed data preparation, modelled the data with a star schema, performed analysis, did evaluations on the analysis, developed an interactive dashboard, provided a high level business recommendations, and finally did a proper documentation.
 
-**Outcome:** [What did you produce or discover?]
+**Outcome:** Implementation of this dashboard will deliver the following outcomes; improved executive visibility across global operations, faster access to strategic business insights, more informed pricing decisons, better allocation of regional sales resources, increased understanding of customer purchasing behaviour, improved monitoring of customer satisfaction, enhanced identification of revenue growth opportunities, and stronger support for long term strategic planning. 
 
 ---
 
@@ -95,24 +75,12 @@
 
 ### Scope
 
-<!--
-  WHAT GOOD LOOKS LIKE:
-  In Scope: "Transaction-level data for Regions A–E, Jan 2023–Jun 2024.
-             Analysis covers revenue, return rates, and product category performance."
-  Out of Scope: "Customer demographics and marketing spend data were excluded -
-                 demographic data was incomplete for two regions, and marketing
-                 data sits in a separate system outside this engagement."
-
-  WHAT TO AVOID:
-  ❌ Leaving Out of Scope blank. This is the section that protects your credibility.
-     If you don't define the fence, reviewers assume you missed things.
--->
 
 | Dimension | Details |
 |-----------|---------|
-| **In Scope** | [What is included - data sources, time periods, segments] |
-| **Out of Scope** | [What you explicitly excluded - and a brief reason why] |
-| **Time Period** | [Date range of the data or the project itself] |
+| **In Scope** | This project includes 10,000 simulated BMW vehicle transactions recorded between January 2024 and December 2025 across more than 25 countries and seven global regions. Analysis covers sales performance, revenue, product performance evaluation, regional performance, customer behaviour, premium warranty adoption, financing, delivery performance, electric vehicle adoption, interactive dashboard development, and strategic business recommendations. |
+| **Out of Scope** | The project does not include manufacturing operations, supply chain management, inventory optimization, dealer profitability analysis, marketing campaign effectiveness, vehicle production planning, financial accounting, Cost of Goods Sold(COGS), net profit analysis, and competitor benchmarking. |
+| **Time Period** | January 2024 - December 2025 |
 | **Granularity** | [Unit of analysis - row-level, daily aggregates, per-user, etc.] |
 
 ### Tools & Technologies
@@ -124,13 +92,12 @@
 
 | Category | Tool(s) Used |
 |----------|-------------|
-| Data Storage | [e.g., PostgreSQL, CSV files, BigQuery, S3] |
-| Data Processing | [e.g., Python, R, SQL, Excel, dbt] |
-| Analysis | [e.g., pandas, dplyr, custom SQL queries] |
-| Visualization | [e.g., Matplotlib, Tableau, Power BI, Looker] |
-| Version Control | [e.g., Git / GitHub] |
-| Documentation | [e.g., Markdown, Notion] |
-| Other | [Any additional tools] |
+| Data Storage | CSV files |
+| Data Processing | Power Query |
+| Analysis | DAX |
+| Visualization | Power BI |
+| Version Control | Git / GitHub |
+| Documentation | Markdown |
 
 ---
 
@@ -204,9 +171,9 @@
 [Output / Visualisation / Reporting]
 ```
 
-1. **Source:** [Where did the data come from? Format, size, access method.]
-2. **Ingestion:** [How was it brought in?]
-3. **Cleaning:** [What issues did you find and fix?]
+1. **Source:** The dataset contains a CSV file, which is a simulated BMW automotive global sales transactions across seven regions and more than 25 countries, with 10,000 transactional records, covering January 2024 - December 2025.
+2. **Ingestion:** Loaded into Power Query. File contained approx. 10,000 rows and 30 columns.
+3. **Cleaning:** The dataset was evaluated for missing values across all columns. Expected null values were retained where they accurately represented business scenarios. For example, the loan_term_months column had blank rows for cash purchases because no financing agreements exits. Also, customer_satisfaction_score column is blank for customers who did not complete the post-purchase survey. These null values were preserved to avoid introducing analytical bias. Unexpected null values were investigated and resolved before modelling. Duplicates were checked and removed to ensure that revenue, sales volume, and customer metrics are not overstated. Standardized data formats across the entire dataset. 
 4. **Transformation:** [What new fields, aggregations, or structures did you create?]
 5. **Analysis:** [What methods - statistical, visual, query-based, model-based?]
 6. **Output:** [What form do the results take?]
