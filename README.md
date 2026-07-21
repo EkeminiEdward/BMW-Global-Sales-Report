@@ -56,17 +56,17 @@
 ## 2. Objectives
 
 
-- **Primary Objective:** The primary objective of this project is to design an executiveBusiness Intelligence dashboard capable of supporting strategic decision-making through comprehensive sales and customer analytics. Specifically, the dashboard aims to:
-- **Secondary Objective 1:** Monitor overall business performance using executive KPI indicators.
-- **Secondary Objective 2:** Evaluate revenue performance across reegions, countries, vehicle models, and product segments.
-- **Secondary Objective 3:** Analyze year-over-year sales growth and monthly sales trends.
-- **Secondary Objective 4:** Measure the adoption of BMW's electric vehicle portfolio.
-- **Secondary Objective 5:** Evaluate pricing strategies through discount and revenue analysis.
-- **Secondary Objective 6:** Assess customer satisfaction and identify its primary drivers.
-- **Secondary Objective 7:** Measure customer loyalty using repeat purchase analysis.
-- **Secondary Objective 8:** Analyze financing preferences across customer and product segments.
-- **Secondary Objective 9:** Monitor delivery lead times and evaluate operational efficiency.
-- **Secondary Objective 10:** Enable executives to explore business performance interactively through dynamic filtering and drill-down analysis.
+- [ ] The primary objective of this project is to design an executiveBusiness Intelligence dashboard capable of supporting strategic decision-making through comprehensive sales and customer analytics. Specifically, the dashboard aims to:
+- [ ] Monitor overall business performance using executive KPI indicators.
+- [ ] Evaluate revenue performance across reegions, countries, vehicle models, and product segments.
+- [ ] Analyze year-over-year sales growth and monthly sales trends.
+- [ ] Measure the adoption of BMW's electric vehicle portfolio.
+- [ ] Evaluate pricing strategies through discount and revenue analysis.
+- [ ] Assess customer satisfaction and identify its primary drivers.
+- [ ] Measure customer loyalty using repeat purchase analysis.
+- [ ] Analyze financing preferences across customer and product segments.
+- [ ] Monitor delivery lead times and evaluate operational efficiency.
+- [ ] Enable executives to explore business performance interactively through dynamic filtering and drill-down analysis.
 
 
 ---
