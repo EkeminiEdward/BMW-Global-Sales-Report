@@ -1,4 +1,4 @@
-# [Project Title]
+# BMW Global Sales Report
 > *One sentence. What did you analyze, build, or solve - and why does it matter?*
 
 ---
@@ -6,12 +6,12 @@
 ## ⚙️ Project Type Flags
 > *Check what applies. This helps reviewers and collaborators understand the nature of the work at a glance. Delete this block before publishing.*
 
-- [ ] Exploratory Data Analysis (EDA)
+-  Exploratory Data Analysis (EDA)
 - [ ] SQL Analysis / Querying
-- [ ] Dashboard / Data Visualization
-- [ ] Data Pipeline / ETL
+-  Dashboard / Data Visualization
+-  Data Pipeline / ETL
 - [ ] Predictive Modelling / Machine Learning
-- [ ] Data Cleaning / Wrangling
+-  Data Cleaning / Wrangling
 - [ ] End-to-End (multiple of the above)
 - [ ] Other: ___________
 
@@ -56,9 +56,16 @@
   (Too vague. Could describe 10,000 projects. Describes none of them.)
 -->
 
-**Context:** [The business, research, or personal situation that motivated this project.]
+**Context:** BMW, which is a large-size global premium automotive company, was experiencing inconsistent revenue across its regional markets but couldn't identify the root cause. Also, they want to know how EV adoption trend is at every region, what drives customer satisfaction, how the financing type correlates with vehicle model segments, etc. This project explored 24 months of transactional data across seven regions, with 10,000 premium vehicle transactions, covering 25 countries to determine BMWW's product portfolio, regional sales performance, electric vehicle adoption, pricing strategies, finanacing patterns, warranty packages adoption, customer satifaction, delivery performance, and customer retention.
 
-**Problem Statement:** [The specific question or challenge you were addressing.]
+**Problem Statement:** The dashboard is designed to answer the following stategic questions
+                      - How is BMW's electric vehicle lineup gaining ground year over year?
+                      - Do customers in the Middle East pay more than those in Europe?
+                      - Which models get the deepest discounts, and why?
+                      - Cash, lease, or loan? How does financing choice correlate with model segment?
+                      - Customer satisfaction drivers — What predicts a 5-star score vs a 3-star score?
+                      - Repeat customer analysis — Which segments retain buyers and which ones don't?
+                      - Delivery time bottlenecks — Does a longer wait hurt satisfaction?
 
 **Approach:** [In 1–2 sentences - how did you tackle it?]
 
@@ -68,28 +75,19 @@
 
 ## 2. Objectives
 
-<!--
-  Write objectives that are specific enough to succeed or fail.
-  Use action-oriented verbs: Identify, Determine, Quantify, Build, Evaluate.
 
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Determine whether customer churn rate correlates with support ticket volume."
-  ✅ "Identify the top three revenue-driving product categories across all regions."
-  ✅ "Build a reproducible pipeline that ingests and cleans daily sales exports."
+- **Primary Objective:** The primary objective of this project is to design an executiveBusiness Intelligence dashboard capable of supporting strategic decision-making through comprehensive sales and customer analytics. Specifically, the dashboard aims to:
+- **Secondary Objective 1:** Monitor overall business performance using executive KPI indicators.
+- **Secondary Objective 2:** Evaluate revenue performance across reegions, countries, vehicle models, and product segments.
+- **Secondary Objective 3:** Analyze year-over-year sales growth and monthly sales trends.
+- **Secondary Objective 4:** Measure the adoption of BMW's electric vehicle portfolio.
+- **Secondary Objective 5:** Evaluate pricing strategies through discount and revenue analysis.
+- **Secondary Objective 6:** Assess customer satisfaction and identify its primary drivers.
+- **Secondary Objective 7:** Measure customer loyalty using repeat purchase analysis.
+- **Secondary Objective 8:** Analyze financing preferences across customer and product segments.
+- **Secondary Objective 9:** Monitor delivery lead times and evaluate operational efficiency.
+- **Secondary Objective 10:** Enable executives to explore business performance interactively through dynamic filtering and drill-down analysis.
 
-  WHAT TO AVOID:
-  ❌ "Explore the data."
-  ❌ "Gain insights."
-  ❌ "Understand trends."
-  (These can't fail - which means they can't succeed either.)
--->
-
-- **Primary Objective:** [The main thing you set out to do]
-- **Secondary Objective 1:** [Supporting goal]
-- **Secondary Objective 2:** [Supporting goal]
-- **Secondary Objective 3:** [Remove if not applicable]
-
-> 💡 *Every analysis decision in this project traces back to one of these objectives.*
 
 ---
 
