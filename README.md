@@ -146,170 +146,133 @@ Specifically, the dashboard aims to:
 
 ## 6. Data Model & Schema
 
-<!--
-  Define your fields so that someone reading your analysis can follow along
-  without digging through your code.
 
-  WHAT GOOD LOOKS LIKE (one row example):
-  | transaction_id | string | Unique identifier per sales transaction | TXN-00482 |
-  | return_flag    | boolean | Whether the transaction included a return | TRUE |
-  | region_code    | string | Two-letter identifier for store region | "NE" |
-
-  WHAT TO AVOID:
-  ❌ Skipping this section because "the field names are self-explanatory."
-     They're not. Not to a reviewer. Not to you in six months.
-
-  📌 FOR SQL PROJECTS: If you have multiple tables, create one block per table.
-     Describe join keys and relationships here. Your ERD (Section 7) will
-     visualise what this section describes in text.
-
-  📌 FOR NON-SQL PROJECTS: Describe the shape of your dataset informally
-     if a formal schema doesn't apply. Even one paragraph is more helpful than nothing.
--->
-
-### Dataset / Table: `[name]`
+### Dataset / Table: `Transaction_Fact`
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| `[field_1]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
-| `[field_2]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
-| `[field_3]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
+| `transaction_id` | string | Unique identifier for each sales transaction | BMW-2024-00113 |
+| `sale_date` | date | Date the vehicle was sold | Wednesday, January 17, 2024 |
+| `sale_year` | int | Year of sale | 2024 |
+| `sale_month` | int | Month of sale | 1 (January) |
+| `sale_quarter` | string | Fiscal quarter of the transaction | Q1 |
+| `model` | string | BMW vehicle model sold | X5 |
+| `variant` | string | Specific engine/drivetrain variant | xDrive40i |
+| `segment` | string | Vehicle market segment | SUV |
+| `body_style` | string | Vehicle body configuration | SUV |
+| `fuel_type` | string | Vehicle powertrain | Electric (BEV) |
+| `transmission` | string | Transmission type | Automatic |
+| `color` | string | Exterior paint colour | Alpine White |
+| `trim_line` | string | Vehicle equipment specification | M Sport |
+| `optional_packages` | int | Number of optional packages selected | 3 |
+| `options_cost_usd` | decimal | Cost of optional equipment | $5,800 |
+| `msrp_usd` | currency | Manufacturer's Suggested Retail Price | $82,000 |
+| `discount_percent` | decimal(%) | Discount applied to MSRP | 7.5% |
+| `discount_amount_usd` | currency | Monetary value of discount | $6,150 |
+| `final_sale_price_usd` | currency | Final selling price after discount and options | $81,650 |
+| `financing_type` | string | Customer payment method | Lease |
+| `loan_term_months` | int | Financing duration | 48 Months |
+| `region` | string | Geographic  sales region | Europe |
+| `country` | string | Country where vehicle was sold | Germany |
+| `sales_channel` | string | Sales channel used | Dealership |
+| `customer_type` | string | Buyer classification | Individual |
+| `warranty_package` | string | Warranty selected | 5-Year Premium |
+| `delivery_days` | int | Days between order confirmation and delivery | 24 Days |
+| `customer_satisfaction_score` | decimal | Customer satisfaction rating (1-5) | 4.8 |
+| `is_repeat_customer` | boolean | Indicates previous BMW ownership | True |
+| `trade_in` | boolean | Indicates whether an existing vehicle was traded in | True |
+| `vehicle_id` | string | Unique vehicle identifier | 1 |
+| `customer_id` | string | Unique customer identifier | 1 |
+| `finance_id` | string | Unique financing type identifier | 1 |
+| `geography_id` | string | Unique geographic identifier | 1 |
 
-> **Row count (approx.):** [X rows]
-> **Date range:** [Start] – [End]
-> **Key join / relationship:** [e.g., `orders.customer_id` → `customers.id`]
 
-*Add additional table blocks as needed for multi-table projects.*
+### Dataset / Table: `Dimn_Customer`
 
----
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `customer_id` | string | Unique customer identifier | 1 |
+| `customer_type` | string | Buyer classification | Individual |
+| `warranty_package` | string | Warranty selected | 5-Year Premium |
+| `is_repeat_customer` | boolean | Indicates previous BMW ownership | True |
 
-## 7. ERD - Entity Relationship Diagram
-### *(Primarily for SQL Projects - remove this section if not applicable)*
 
-<!--
-  An ERD shows how your tables connect to each other visually.
-  It is the fastest way for a reviewer to understand the data structure
-  of a SQL project without reading every query.
+### Dataset / Table: `Dimn_Finance`
 
-  HOW TO INCLUDE YOUR ERD:
-  Option A - Image embed (most common):
-    Export your ERD from dbdiagram.io, DBeaver, Lucidchart, or similar.
-    Save to /visuals/erd.png and reference it below.
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `finance_id` | string | Unique financing type identifier | 1 |
+| `financing_type` | string | Customer payment method | Lease |
+| `loan_term_months` | int | Financing duration | 48 Months |
 
-  Option B - dbdiagram.io code block (version-controllable):
-    Paste your schema definition code directly in the fenced block below.
-    Anyone can paste it into dbdiagram.io to regenerate the visual.
 
-  Option C - Mermaid diagram (renders natively in GitHub):
-    Use the mermaid code block syntax below.
-    GitHub will render this as a diagram automatically.
+### Dataset / Table: `Dimn_Geography`
 
-  PICK ONE. Don't use all three. Delete the options you don't use.
--->
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `geography_id` | string | Unique geographic identifier | 1 |
+| `region` | string | Geographic  sales region | Europe |
+| `country` | string | Country where vehicle was sold | Germany |
 
-### Option A - Embedded Image
-![ERD Diagram](visuals/erd.png)
-*[Brief caption: e.g., "Three-table schema - orders, customers, and products joined on shared IDs."]*
 
----
+### Dataset / Table: `Dimn_Vehicle`
 
-### Option B - dbdiagram.io Schema Definition
-```
-Table orders {
-  order_id    int     [pk]
-  customer_id int     [ref: > customers.customer_id]
-  product_id  int     [ref: > products.product_id]
-  order_date  date
-  amount      float
-}
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `vehicle_id` | string | Unique vehicle identifier | 1 |
+| `model` | string | BMW vehicle model sold | X5 |
+| `variant` | string | Specific engine/drivetrain variant | xDrive40i |
+| `segment` | string | Vehicle market segment | SUV |
+| `body_style` | string | Vehicle body configuration | SUV |
+| `fuel_type` | string | Vehicle powertrain | Electric (BEV) |
+| `transmission` | string | Transmission type | Automatic |
+| `color` | string | Exterior paint colour | Alpine White |
+| `trim_line` | string | Vehicle equipment specification | M Sport |
+> **Row count (approx.):** 10,000
+> **Date range:** Monday, January 1, 2024 – Wednesday, December 31, 2025
+> **Key join / relationship:** `Dim_Customer.customer_id` → `Transaction_Fact.customers_id`, `Dim_Finance.finance_id` → `Transaction_Fact.finance_id`, `Dim_Geography.geography_id` → `Transaction_Fact.geograhy_id`, `Dim_Vehicle.vehicle_id` → `Transaction_Fact.vehicle_id`
+(ALL : One-to-Many Relationship)
 
-Table customers {
-  customer_id int  [pk]
-  region_code string
-  signup_date date
-}
-
-Table products {
-  product_id   int    [pk]
-  category     string
-  unit_price   float
-}
-```
-*Paste this into [dbdiagram.io](https://dbdiagram.io) to view the visual.*
-
----
-
-### Option C - Mermaid Diagram *(renders on GitHub)*
-```mermaid
-erDiagram
-    ORDERS {
-        int order_id PK
-        int customer_id FK
-        int product_id FK
-        date order_date
-        float amount
-    }
-    CUSTOMERS {
-        int customer_id PK
-        string region_code
-        date signup_date
-    }
-    PRODUCTS {
-        int product_id PK
-        string category
-        float unit_price
-    }
-    ORDERS ||--o{ CUSTOMERS : "placed by"
-    ORDERS ||--o{ PRODUCTS : "contains"
-```
 
 ---
 
-**Table Relationships Summary:**
+## 7. Analysis & Metrics
 
-| Relationship | Join Key | Type |
-|-------------|----------|------|
-| `orders` → `customers` | `customer_id` | Many-to-One |
-| `orders` → `products` | `product_id` | Many-to-One |
-| [Add rows as needed] | | |
-
----
-
-## 8. Analysis & Metrics
-
-<!--
-  Explain what you measured and how - before you share what you found.
-
-  WHAT GOOD LOOKS LIKE:
-  Metric: "Customer Return Rate"
-  Definition: "Number of transactions flagged as returns divided by total
-               transactions, calculated at product-category and regional grain."
-  Why It Matters: "Return rate - not sales volume - was hypothesised to
-                  explain regional revenue gaps. This metric tests that hypothesis."
-
-  WHAT TO AVOID:
-  ❌ Defining a metric only in code: SUM(returns) / COUNT(transaction_id)
-     That's an implementation. Write the plain-language definition here.
-     Both belong in your project - the definition in the README,
-     the implementation in the code.
--->
 
 ### Analytical Approach
 
-[Describe how you approached the analysis. Were you exploring patterns? Testing a hypothesis? Building and validating a pipeline? Be honest about your method - exploratory work is valid, just call it that.]
+This project adopted a descriptive statistical analysis and trend analysis approach using a dimensional (star schema) data model, Power Query for data transformation, and DAX  measures to evaluate slaes performance, pricing, customer behaviour, regional performance, and operational efficiency. Interactive Power BI visualizations, time intelligence, and comparative analyses were then used to reveal business insights, identify performance drivers, and support executive-level strategic decision-making.
 
 ### Key Metrics Defined
 
 | Metric | Plain-Language Definition | Why It Matters |
 |--------|--------------------------|----------------|
-| `[Metric 1]` | [What it measures, in one sentence] | [What decision or question it answers] |
-| `[Metric 2]` | [What it measures, in one sentence] | [What decision or question it answers] |
-| `[Metric 3]` | [What it measures, in one sentence] | [What decision or question it answers] |
+| `Revenue` | Total revenue realised after discounts and options | Actual commercial revenue |
+| `Vehicle Sold` | Total number of completed vehicle sales | Sales volume |
+| `Gross MSRP` | Total Manufacturer's Suggested Retail Price before discounts | Potential sale value |
+| `Total Discounts` | Total discount value granted | Discount expenditure |
+| `Avg Selling Price` | Average selling price per vehicle | Revenue quality |
+| `Avg Discount Rate ` | Average percentage discount offered | Pricing strategy effectiveness |
+| `Revenue YTD` | Revenue accumulated from the beginning of the year | Year-To-Date performance |
+| `Revenue LY` | Revenue for the saame period in the previous year | Historical comparison |
+| `Revenue YoY Rate` | Percentage revenue growth over previous year | Growth rate |
+| `Top Selling Model` | Model with the highest sale volume | Product demand |
+| `Top Revenue Model` | Model generating the highest revenue | Product profitability potential |
+| `EV Adoption Rate` | Percentage of vehicles sold that are electric vehicles | Electrification progress |
+| `Largest EV Market` | Region with the highest EV sales | Leading EV market |
+| `PW Adoption Rate` | Percentage of customers selecting the premium warranty | After-sales service adoption |
+| `Customer Retention Rate` | Percentage of repeat customers | Customer loyalty |
+| `Customer Satisfaction Index (CSI)` | Average customer satisfaction score | Customer experience |
+| `Top Revenue Region` | Region generaating the highest revenue | Best-performing market |
+| `Top CSI Region` | Region with the highest satisfaction score | Best customer experience |
+| `Avg Lead Time` | Average number of days required to deliver a vehicle | Operational efficiency |
+
+
 
 ### Methods Used
 
-- [e.g., Descriptive statistics - distribution, central tendency, outlier detection]
-- [e.g., Trend analysis across [time period]]
+- Descriptive statistics - distribution analysis.
+- Time intelligence and Trend analysis across January, 2024 - December, 2025.
 - [e.g., Segmentation / group comparison by [dimension]]
 - [e.g., Correlation analysis between [variable A] and [variable B]]
 - [e.g., SQL window functions for [specific aggregation]]
@@ -317,7 +280,7 @@ erDiagram
 
 ---
 
-## 9. Key Insights
+## 8. Key Insights
 
 <!--
   Findings + implications. Not just what happened - what it means.
