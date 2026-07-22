@@ -22,14 +22,13 @@
 4. [Repository Structure](#4-repository-structure)
 5. [Data Workflow](#5-data-workflow)
 6. [Data Model & Schema](#6-data-model--schema)
-7. [ERD - Entity Relationship Diagram](#7-erd--entity-relationship-diagram) *(SQL projects)*
-8. [Analysis & Metrics](#8-analysis--metrics)
-9. [Key Insights](#9-key-insights)
-10. [Recommendations](#10-recommendations)
-11. [Assumptions & Limitations](#11-assumptions--limitations)
-12. [Future Enhancements](#12-future-enhancements)
-13. [Deliverables](#13-deliverables)
-14. [Author](#14-author)
+7. [Analysis & Metrics](#7-analysis--metrics)
+8. [Key Insights](#8-key-insights)
+9. [Recommendations](#9-recommendations)
+10. [Assumptions & Limitations](#10-assumptions--limitations)
+11. [Future Enhancements](#11-future-enhancements)
+12. [Deliverables](#12-deliverables)
+13. [Author](#13-author)
 
 ---
 
@@ -230,8 +229,7 @@ Specifically, the dashboard aims to:
 | `trim_line` | string | Vehicle equipment specification | M Sport |
 > **Row count (approx.):** 10,000
 > **Date range:** Monday, January 1, 2024 – Wednesday, December 31, 2025
-> **Key join / relationship:** `Dim_Customer.customer_id` → `Transaction_Fact.customers_id`, `Dim_Finance.finance_id` → `Transaction_Fact.finance_id`, `Dim_Geography.geography_id` → `Transaction_Fact.geograhy_id`, `Dim_Vehicle.vehicle_id` → `Transaction_Fact.vehicle_id`
-(ALL : One-to-Many Relationship)
+> **Key join / relationship:** `Dim_Customer.customer_id` → `Transaction_Fact.customers_id`, `Dim_Finance.finance_id` → `Transaction_Fact.finance_id`, `Dim_Geography.geography_id` → `Transaction_Fact.geograhy_id`, `Dim_Vehicle.vehicle_id` → `Transaction_Fact.vehicle_id` (ALL: One-to-Many Single Direction Relationships)
 
 
 ---
@@ -271,12 +269,12 @@ This project adopted a descriptive statistical analysis and trend analysis appro
 
 ### Methods Used
 
-- Descriptive statistics - distribution analysis.
+- Data Cleaning and Transformation (Power Query ETL).
+- Created a Dimensional Data Modelling (Star Schema).
+- DAX Measure Development.
+- Descriptive statistics - distribution analysis, comparative data analysis.
 - Time intelligence and Trend analysis across January, 2024 - December, 2025.
-- [e.g., Segmentation / group comparison by [dimension]]
-- [e.g., Correlation analysis between [variable A] and [variable B]]
-- [e.g., SQL window functions for [specific aggregation]]
-- [e.g., Custom aggregation or transformation logic in [tool]]
+- Interactive Data Visualization and Executive Dashboard Design
 
 ---
 
