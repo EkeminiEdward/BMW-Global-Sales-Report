@@ -298,13 +298,23 @@ This project adopted a descriptive statistical analysis and trend analysis appro
   Aim for 3–6 insights. Quality over quantity.
 -->
 
-**Insight 1: [Short descriptive headline]**
-[What you found + what it suggests. One short paragraph.]
+**Insight 1: BMW commercial performance across global markets**
+The executive overview page portrays key commercial indicators including Revenue, Vehicle Sold, Gross MSRP, Total Discount, Revenue Trends, and Revenue Growth. Revenue Trends reveal seasonal demand fluctuations while highlighting overall commercial performance throughout the reporting period.
 
-**Insight 2: [Short descriptive headline]**
-[What you found + what it suggests.]
+**Insight 2: Regions that generate the greatest commercial value**
+Regional analysis compaqres total revenue, sales volume, customer satisfaction, and delivery performance across all global markets.
+Comparative visuals clearly identify high-performing regions and markets requiring strategic interveention. North America had the highest revenue (approx. $177M), Europe had the highest sales volume (2919 vehicles sold) throughout the reporting period.
 
-**Insight 3: [Short descriptive headline]**
+**Insight 3: BMW  models that generate the highest business value**
+Product performance analysis evaluates each model using both revenue and sales volume. The distinction between Top Selling Model and Top Revenue Model enables management to differentiate between popularity and profitability. 3 Series was the Top Selling Model, and X5 was the Top Revenue Model throghout the reporting period.
+
+**Insight 4: Is BMW's electric vehicle strategy gaining market traction?**
+Electric vehicle adoption was measured using Fuel Type analysis, EV A doption Rate, and Largest EV Market. Regional comparisons revealed where BMW's electrification strategy has achieved the greatest commercial success. The EV market grew in revenue from $37M in year 2024 to the revenue of $38M in year 2025. North America is the region with the largest EV market, with a sales volume of 342 vehicles sold across the reporting period.
+
+**Insight 5: The effectiveness of BMW's pricing strategy**
+Pricing performance is evaluated using Gross MSRP, Revenue, Total Discount, and Average Discount Rate. The dashboard enables executives to quantify the financial impact of discounts while monitoring pricing consistency across products and markets
+
+**Insight 4 (if applicable): [Short descriptive headline]**
 [What you found + what it suggests.]
 
 **Insight 4 (if applicable): [Short descriptive headline]**
