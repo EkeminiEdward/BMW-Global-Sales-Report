@@ -377,9 +377,10 @@ The solution assumes:
 **Ekemini Edward**
 Data Analyst
 
-- 🔗 [LinkedIn URL]
-- 💼 [Portfolio or GitHub profile URL]
-- 📧 [Email - optional]
+- 🔗 www.linkedin.com/in/ekemini-edward-052b5157
+- 💼 https://github.com/EkeminiEdward/EkeminiEdward.github.io.git
+- 📧 edyswagg@gmail.com
+
 
 ---
 
