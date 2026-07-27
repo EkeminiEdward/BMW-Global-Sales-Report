@@ -27,8 +27,7 @@
 9. [Recommendations](#9-recommendations)
 10. [Assumptions & Limitations](#10-assumptions--limitations)
 11. [Future Enhancements](#11-future-enhancements)
-12. [Deliverables](#12-deliverables)
-13. [Author](#13-author)
+12. [Author](#12-author)
 
 ---
 
@@ -99,23 +98,25 @@ Specifically, the dashboard aims to:
 ## 4. Repository Structure
 
 ```
-[project-root]/
+BMW-Global-Sales-Report/
 │
-├── data/
-│   ├── raw/                  # Original, unmodified source data - never edited
-│   ├── processed/            # Cleaned and transformed data
-│   └── external/             # Reference data, lookup tables, third-party files
+│── README.md
 │
-├── scripts/                  # Reusable .py, .R, or .sh processing files
+├── Dashboard/
+│   ├── BMW_Global_Sales_Report.pbix
 │
-├── reports/                  # Final outputs: PDFs, slide decks, Word docs
+├── dataset/
+│   ├── BMW_Sales_2024_2025.csv               
 │
-├── visuals/                  # Exported charts, dashboard screenshots, ERD diagrams
+├── visuals/                  
+│   ├── Executive_Overview.png
+│   ├── Product_Performance.png
+│   ├── Customer_Insights.png
+│   ├── Regional_Insights.png
 │
-├── docs/                     # Data dictionaries, schema notes, reference material
-│
-└── README.md                 # You are here
-```
+│__ Assets/
+    │__ Dashboard_GIF.gif                  
+    │__ Dat_Model_architectural_design.png
 
 
 ---
@@ -231,7 +232,6 @@ Specifically, the dashboard aims to:
 > **Date range:** Monday, January 1, 2024 – Wednesday, December 31, 2025
 > **Key join / relationship:** `Dim_Customer.customer_id` → `Transaction_Fact.customers_id`, `Dim_Finance.finance_id` → `Transaction_Fact.finance_id`, `Dim_Geography.geography_id` → `Transaction_Fact.geograhy_id`, `Dim_Vehicle.vehicle_id` → `Transaction_Fact.vehicle_id` (ALL: One-to-Many Single Direction Relationships)
 
-
 ---
 
 ## 7. Analysis & Metrics
@@ -280,23 +280,6 @@ This project adopted a descriptive statistical analysis and trend analysis appro
 
 ## 8. Key Insights
 
-<!--
-  Findings + implications. Not just what happened - what it means.
-
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Return rates, not sales volume, explain Region A's underperformance.
-      Region A's return rate on home goods was 34% - more than double the
-      company average. Revenue was not lost at the point of sale; it was
-      lost post-sale through refunds. This points to a fulfilment or
-      product quality issue specific to that region, not a demand problem."
-
-  WHAT TO AVOID:
-  ❌ "Region A had lower revenue than other regions in Q4."
-     (That's an observation. It describes what happened.
-      An insight says what it means and where to look next.)
-
-  Aim for 3–6 insights. Quality over quantity.
--->
 
 **Insight 1: BMW commercial performance across global markets**
 The executive overview page portrays key commercial indicators including Revenue, Vehicle Sold, Gross MSRP, Total Discount, Revenue Trends, and Revenue Growth. Revenue Trends reveal seasonal demand fluctuations while highlighting overall commercial performance throughout the reporting period.
@@ -311,114 +294,72 @@ Product performance analysis evaluates each model using both revenue and sales v
 **Insight 4: Is BMW's electric vehicle strategy gaining market traction?**
 Electric vehicle adoption was measured using Fuel Type analysis, EV A doption Rate, and Largest EV Market. Regional comparisons revealed where BMW's electrification strategy has achieved the greatest commercial success. The EV market grew in revenue from $37M in year 2024 to the revenue of $38M in year 2025. North America is the region with the largest EV market, with a sales volume of 342 vehicles sold across the reporting period.
 
-**Insight 5: The effectiveness of BMW's pricing strategy**
-Pricing performance is evaluated using Gross MSRP, Revenue, Total Discount, and Average Discount Rate. The dashboard enables executives to quantify the financial impact of discounts while monitoring pricing consistency across products and markets
+**Insight 5: Customer Satisfaction Index**
+Customer Satisfaction Index (CSI) is analysed by region, model, and delivery performance. The analysis identifies geographic differences in customer experience and highlights factors influencing post-purchase satisfaction. In the report, Rental customers in the Latin America region, were the most satisfied customers with a satisfaction score of 4.55, while the African Government customers were the least satisfied customers, with a score of 3.85.
 
-**Insight 4 (if applicable): [Short descriptive headline]**
-[What you found + what it suggests.]
+**Insight 5: Does delivery performance inluence customer satisfaction?**
+Operational performance is assessed by comparing Average Delivery Lead Time with Customer Satisfaction Index. The scatter analysis reveals whether longer delivery times correspond with lower satisfaction levels. In the report, it revealed that the average delivery lead time did influence the customer satisfaction, because all the regions were satisfied with the delivery lead time.
 
-**Insight 4 (if applicable): [Short descriptive headline]**
-[What you found + what it suggests.]
+**Insight 6: Regions to be prioritized for future growth**
+Region-level revenue rankings, orevenue contribution, and EV adoption metrics identify markets with the greatest expansion potential. The analysis enables executives to distinguish mature markets from emerging opportunities. North America and Europe, returned as the top revenue regions and highest in EV adoption rate, which suggests and supports market expansion. on the contrary, Africa was the lowest region in revenue and EV adoption, which calls for an executive investment planning.
 
 ---
 
-## 10. Recommendations
+## 9. Recommendations
 
-<!--
-  Action-oriented. Addressed to a real audience.
-  Tied explicitly to the insight that supports each one.
-
-  WHAT GOOD LOOKS LIKE:
-  Priority: High
-  Recommendation: "Conduct a fulfilment audit for home goods deliveries
-                   in Region A - specifically investigating whether returns
-                   correlate with a particular warehouse, carrier, or SKU batch."
-  Based On: Insight 1 - return rate anomaly in Region A
-  Owner: Operations / Supply Chain team
-
-  WHAT TO AVOID:
-  ❌ "Improve the return rate."
-     (Not actionable. Doesn't say who, how, or where to start.)
-  ❌ "Further analysis is needed."
-     (This is a placeholder, not a recommendation.)
--->
 
 | Priority | Recommendation | Based On | Suggested Owner |
 |----------|---------------|----------|-----------------|
-| High | [Specific, actionable step] | [Insight it comes from] | [Who should act] |
-| Medium | [Specific, actionable step] | [Insight it comes from] | [Who should act] |
-| Low | [Exploratory or longer-term suggestion] | [Insight it comes from] | [Who should act] |
+| High | Expand Investment in High-Performing Markets; Increase inventory allocation for high-demand markets, expand dealership capacity where demand consistently exceeds supply, prioritize premium model availability, and allocate  a greater share of regional marketing budgets to sustain momentum. | Business Insight 2 - Region that generates the greates commercial value. | Executives |
+| Medium | Strnghten Underperforming Regional Markets; Conduct market-specific pricing reviews,assess dealership coverage and customer accessibility, increase localized promotional campaigns, and introduce region-specific financing incentives where appropriate | Business Insight 2 | Executives |
+| Medium | Prioritize High-Value Product Lines; Increase production and availability of high-revenue model, use best-selling models as customer acquisition vehicles while promoting premium variants through upselling, and review product portfolio performance quarterly to identify changing demand patterns. | Business Insight 3 - BMW models that generate the highest business value | Executives |
+| High | Accelerate Electric Vehicle Growth; Expand EV inventory in markets demonstrating strong adoption, increase partnerships supporting charging infastructure where feasible, develop targeted campaigns highlighting total cost of ownership and sustainability benefits, and introduce tailored financing packages for electric vehicles. | Business Insight 4 - Is BMW's electric vehicle strategy gaining traction? | Executives |
+| High | Improve Customer Experience Through Delivery Optimisation; Investigate operational bottlenecks affecting vehicle delivery, improve coordination between production, logistics, and dealerships, implement delivery performance monitoring dashboards for regional managers, and establish lead-time targets and track adherence monthly. | Business Insight 5 - Does delivery performance influence customer satisfaction? | Executives |
+| Ongoing | Institutionalise Data-Driven Deciosn-Making; Adopt a dashboard as the primary source for executive performance reporting, standardise KPI definitions across departments, schedule periodic reviews of business metrics and DAX logic to ensure continued alignment with evolving business objectives, and extend the dashboard with additional subject areas, such as inventory, dealer performance, and after-sales service, as new data becomes available. | All Business Insights | Executives |
 
 ---
 
-## 11. Assumptions & Limitations
+## 10. Assumptions & Limitations
 
-<!--
-  WHAT GOOD LOOKS LIKE:
-  Assumption: "Transaction records were assumed to be complete for all five regions.
-               No validation was performed against source system record counts."
-  Limitation: "The analysis cannot distinguish between returns initiated by
-               the customer vs. returns initiated by the business (e.g., recalls).
-               If business-initiated returns are concentrated in Region A, the
-               return rate finding may reflect a policy decision, not a quality issue."
-
-  WHAT TO AVOID:
-  ❌ Leaving this section blank or writing "None known."
-     Every project has limitations. Documenting them is a sign of
-     analytical maturity - not a confession of failure.
--->
 
 ### Assumptions
-- [What did you treat as true without being able to verify?]
-- [What simplifications did you make for scope or feasibility?]
-- [What domain rules or definitions did you accept as given?]
+The solution assumes:
+- Each transaction represents one completed vehicle sale.
+- Transaction IDs are unique.
+- Data is complete and internally consistent.
+- Vehicle delivery dates are accurately recorded.
+- Warranty and financing information are correctly captured.
 
 ### Limitations
-- [What gaps exist in the data?]
-- [What analysis was out of scope but could affect interpretation?]
-- [What would a more rigorous version of this project include?]
-- [Are there known biases in the data source or collection method?]
-
-> *The goal here is pre-emptive Q&A. What would a thoughtful skeptic push back on? Document the answer here, before they ask.*
-
----
-
-## 12. Future Enhancements
-
-<!--
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Automate the monthly data pull from the POS export folder using
-      a scheduled Python script, replacing the current manual process."
-  ✅ "Expand the return rate analysis to include carrier-level data,
-      which was unavailable in this dataset but exists in the logistics system."
-
-  WHAT TO AVOID:
-  ❌ "Add a machine learning model."
-     (Vague, and disconnected from the actual findings of this project.)
-  ❌ Listing aspirational features that don't follow logically from the work.
--->
-
-- [ ] [Enhancement 1 - specific and traceable to a real gap in this project]
-- [ ] [Enhancement 2]
-- [ ] [Enhancement 3]
-- [ ] [Enhancement 4]
+- The dashboard is built using a simulated dataset designed to resemble real-world BMW sales transactions.
+- The analysis covers transactions from January 2024 through December 2025, only.
+- Revenue calculations are based on Final Sale Price. The dataset does not include; cost of goods sold(COGS), manufacturing costs, logistics costs, dealer incentives, operating expenses, and marketing expenditure.
+- Gross Profit, Operating Profit, Profit Margin, and Return on Investment cannot be calculated because the irquired financial data is unavailable.
+- Approximately one-quarter of the customer satisfaction scores are unavailable because not every customer completed the post-purchase survey.
+- Customer attributes are intentionally limited. Unavailable attributes include; age, gender, household income, occupation, customer tenure, and household size.
+- The dataset includes regions and countries only. Unavailable geographic information includes; cities, states or provinces, dealership locations, and sale territories.
+- The dataset does not include; vehicle inventory, stock availability, factory production, logistics milestones, and supplier information.
+- Marketing metrics are unavailable. Missing information includes; campaigns, advertising spend, lead generation, digital engagement, and conversion funnels.
+- All monetary values are reported in USD. Foreign exchange fluctuations are not considered
 
 ---
 
-## 13. Deliverables
+## 11. Future Enhancements
 
-| Deliverable | Description | Location |
-|-------------|-------------|----------|
-| [Name] | [What it contains] | [`/path/to/file`] |
-| [Name] | [What it contains] | [`/path/to/file`] |
-| [Name] | [What it contains] | [`/path/to/file`] |
+
+-  Profitability Analttics - Integrate financial data to enable; gross profit, operating profit, net profit, profit margin, cost-to-revenue ratio, profitability by model, and profitability by region.
+-  Inventory & Supply Chain Analytics - Expand the model to include; vehicle inventory, inventory turnover, days of supply, factory production, shipment tracking, and stock-out analysis.
+-  Service & After-Sales Analytics - Incorporate after-sales data such as; service visits, maintenance costs, warranty claims, parts replacement, and service retention.
+-  Marketing Performance Integration - Connect marketing data to measure; campaign performance, lead conversion, customer acquisition cost, return on marketing investment, digital channel performance.
+-  Customer 360 Analytics - Enhance customer analysis through additional attributes including; demographics, purchase history, customer lifetime value(CLV), churn risk, and loyalty programme participation.
+-  Reat-Time Reporting - Integrate streaming or near real-time data sources to monitor; daily sales, revenue, vehicles deliveries, customer satisfaction, and dealer performance.
 
 ---
 
-## 14. Author
+## 12. Author
 
-**[Your Name]**
-[Your role or title - current or target]
+**Ekemini Edward**
+Data Analyst
 
 - 🔗 [LinkedIn URL]
 - 💼 [Portfolio or GitHub profile URL]
@@ -426,5 +367,4 @@ Pricing performance is evaluated using Gross MSRP, Revenue, Total Discount, and 
 
 ---
 
-*Last updated: [Month YYYY]*
-*If this template helped you, consider starring the repository.*
+*Last updated: July 2026*
