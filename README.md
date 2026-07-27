@@ -119,6 +119,7 @@ BMW-Global-Sales-Report/
     │__ Dashboard_GIF.gif                  
     │__ Data_Model_architectural_design.png
 
+```
 
 ---
 
@@ -135,6 +136,8 @@ BMW-Global-Sales-Report/
       ↓
 [Output / Visualisation / Reporting]
 ```
+
+---
 
 1. **Source:** The dataset contains a CSV file, which is a simulated BMW automotive global sales transactions across seven regions and more than 25 countries, with 10,000 transactional records, covering January 2024 - December 2025.
 2. **Ingestion:** Loaded into Power Query. File contained approx. 10,000 rows and 30 columns.
@@ -356,6 +359,7 @@ The solution assumes:
 -  Reat-Time Reporting - Integrate streaming or near real-time data sources to monitor; daily sales, revenue, vehicles deliveries, customer satisfaction, and dealer performance.
 
 ---
+
 ## 12. Deliverables
 
 | Deliverable | Description | Location |
@@ -366,6 +370,7 @@ The solution assumes:
 | Regional Insights | Monitors regional business transaction performance. | visuals/Regional Insights.png |
 | Data Model | A Star schema data model was implemented | Assets/Data Model architectural design.png |
 
+---
 
 ## 13. Author
 
