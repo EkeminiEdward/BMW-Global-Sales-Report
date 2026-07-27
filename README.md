@@ -27,7 +27,8 @@
 9. [Recommendations](#9-recommendations)
 10. [Assumptions & Limitations](#10-assumptions--limitations)
 11. [Future Enhancements](#11-future-enhancements)
-12. [Author](#12-author)
+12. [Deliverables](#12-deliverables)
+13. [Author](#13-author)
 
 ---
 
@@ -116,7 +117,7 @@ BMW-Global-Sales-Report/
 │
 │__ Assets/
     │__ Dashboard_GIF.gif                  
-    │__ Dat_Model_architectural_design.png
+    │__ Data_Model_architectural_design.png
 
 
 ---
@@ -355,8 +356,18 @@ The solution assumes:
 -  Reat-Time Reporting - Integrate streaming or near real-time data sources to monitor; daily sales, revenue, vehicles deliveries, customer satisfaction, and dealer performance.
 
 ---
+## 12. Deliverables
 
-## 12. Author
+| Deliverable | Description | Location |
+|-------------|-------------|----------|
+| BMW Global Sales Executive Overview | Contains a high-level view of business performance. | visuals/Executive Overview.png |
+| Customer Insights | Focuses on customer behaviour and retention. | visuals/Customer Insights.png |
+| Product Performance | Analyzes marketplace performance. | visuals/Product performance.png |
+| Regional Insights | Monitors regional business transaction performance. | visuals/Regional Insights.png |
+| Data Model | A Star schema data model was implemented | Assets/Data Model architectural design.png |
+
+
+## 13. Author
 
 **Ekemini Edward**
 Data Analyst
