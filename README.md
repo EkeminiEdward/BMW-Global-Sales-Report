@@ -103,11 +103,12 @@ BMW-Global-Sales-Report/
 │
 │── README.md
 │
-├── Dashboard/
+├── reports/
 │   ├── BMW_Global_Sales_Report.pbix
 │
-├── dataset/
-│   ├── BMW_Sales_2024_2025.csv               
+├── data/
+│   ├──raw
+│       ├── BMW_Sales_2024_2025.csv               
 │
 ├── visuals/                  
 │   ├── Executive_Overview.png
